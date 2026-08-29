@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Soal 02 - Ganti Nama</title>
+</head>
+
+<body>
+
+    <h2> Soal 02: Ganti Nama</h2>
+
+    <h1 id="judul">Nama: ???</h1>
+    <button id="tombolNama">Isi Nama</button>
+
+    <script>
+       let judul = document.getElementById("judul");
+       let tombol = document.getElementById("tombolNama");
+       function ubahNama() {
+        judul.innerHTML = "Nama: Budi"
+       }
+       tombol.addEventListener("click", ubahNama);
+    </script>
+</body>
+
+</html>
