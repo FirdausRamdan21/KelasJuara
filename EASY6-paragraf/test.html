@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Menggantikan</h1>
+    <p id="teks">Ini adalah teks awal</p>
+    <button id="tombolGanti"></button>
+    <script>
+        let teks = document.getElementById("teks");
+        let tombol = document.getElementById("tombolGanti");
+
+        function mengganti() {
+            teks.innerHTML = "Teks sudah diganti oleh JavaScript!";
+        }
+        tombol.addEventListener("click", mengganti);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Soal 06 - Ganti Isi Paragraf</title>
+</head>
+<body>
+
+  <h2>Soal 06: Ganti Isi Paragraf</h2>
+
+  <p id="paragrafUtama">Ini adalah teks awal.</p>
+  <button id="tombolGanti">Ganti Teks</button>
+
+  <script>
+    let teks = document.getElementById("paragrafUtama");
+    let tombol = document.getElementById("tombolGanti");
+
+    function mengganti() {
+        teks.innerHTML = "Teks sudah diganti oleh JavaScript!";
+    }
+    tombol.addEventListener("click", mengganti);
+  </script>
+</body>
+</html>
