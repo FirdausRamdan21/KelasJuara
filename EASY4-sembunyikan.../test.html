@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background: black;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>Sembunyikan aku</p>
+    <h1 id="ketakutan">Depresi</h1>
+    <button id="tombolKlik">KLIK AKU SEGERA!!!</button>
+
+    <script>
+        let kata = document.getElementById("ketakutan");
+        let tombol = document.getElementById("tombolKlik");
+
+        function obati() {
+            kata.innerHTML = " ";
+        }
+        tombol.addEventListener("click", obati);
+    </script>
+</body>
+</html>
