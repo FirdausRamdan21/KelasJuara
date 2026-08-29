@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="background">
+    <h1 id="hari">Siang</h1>
+    <p id="teks" style="color:black">Siang itu tenang</p>
+    <button id="mengganti">Hari</button>
+    <script>
+        let teks = document.getElementById("teks");
+        let background = document.getElementById("background");
+        let tombol = document.getElementById("mengganti");
+        let hari = document.getElementById("hari");
+
+
+        function malam() {
+            teks.style.color = "red";
+            teks.innerHTML = "Malam...";
+            suasana.style.color = "yellow";
+            suasana.innerHTML = "malam";
+            hari.style.background =  "black";
+        }
+        tombol.addEventListener("click", malam);
+    </script>
+    </main>
+</body>
+</html>
