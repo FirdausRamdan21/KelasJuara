@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="kondisi">kapan Terakhir Kamu Bahagia?...</h1>
+    <P id="ucapan"></P>
+    <button id="button">cek</button>
+    <script>
+        let button = document.getElementById("button");
+        let tanggal = document.getElementById("kondisi");
+        let teks = document.getElementById("ucapan");
+
+        function ucapkan() {
+            tanggal.innerHTML = "Tidak Pernah";
+            teks.innerHTML = "Kamu... Jika tidak pernah. maka hari ini ku buat bahagia!";
+        }
+        button.addEventListener("click", ucapkan);
+    </script>
+</body>
+</html>
