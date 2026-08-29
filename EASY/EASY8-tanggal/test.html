@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <h1 id="kondisi">kapan Terakhir Kamu Bahagia?...</h1>
@@ -17,6 +23,8 @@
         function ucapkan() {
             tanggal.innerHTML = "Tidak Pernah";
             teks.innerHTML = "Kamu... Jika tidak pernah. maka hari ini ku buat bahagia!";
+            tanggal.style.color = "red";
+            teks.style.color = "yellow";
         }
         button.addEventListener("click", ucapkan);
     </script>
