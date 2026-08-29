@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Soal 03 - Hitung Klik</title>
+</head>
+<body>
+
+  <h2> Soal 03: Hitung Klik</h2>
+
+  <p id="tampilKlik">Jumlah Klik: 0</p>
+  <button id="tombolKlik">Klik Saya!</button>
+
+  <script>
+    let kuantitas = 0;
+    let tampil = document.getElementById("tampilKlik");
+    let tombol = document.getElementById("tombolKlik");
+
+     function tombolKlik() {
+        kuantitas++;
+        tampil.innerHTML = "jumlah klik :" + kuantitas;
+     }
+     tombol.addEventListener("click", tombolKlik);
+  </script>
+</body>
+</html>

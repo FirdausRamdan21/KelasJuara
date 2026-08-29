@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click</title>
+</head>
+<body>
+    <h1>CLicking</h1>
+    <p id="jumlahKlik">Jumlah klik: 0</p>
+    <button id="tombolKlik">Tombol klik</button>
+
+    <script>
+        let jumlahKlik = 0;
+        let tampil = document.getElementById("jumlahKlik");
+        let tombol = document.getElementById("tombolKlik");
+        tampil.innerHTML = "Jumlah klik: " + jumlahKlik;
+        function tambahKlik() {
+            jumlahKlik = jumlahKlik + 1;
+            tampil.innerHTML = "jumlah klik: " + jumlahKlik;
+        }
+
+        tombol.addEventListener("click", tambahKlik);
+    </script>
+</body>
+</html>
