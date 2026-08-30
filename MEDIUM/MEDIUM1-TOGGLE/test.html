@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lampu</h1>
+    <h3 id="statusMode">Mode Gelap</h3>
+    <button id="tombolMode">Matikan Lampu</button>
+
+    <script>
+        let tombol = document.getElementById("tombolMode");
+        let status = document.getElementById("statusMode");
+
+        function lampu() {
+            if (status.innerText === "Mode Gelap") {
+                status.innerText = "Mode Terang";
+                tombol.innerText = "Menyalakan Lampu";
+            } else {
+                status.innerText =    "Mode Gelap";
+                tombol.innerText = "Matikan Lampu"
+            }
+        }
+        tombol.addEventListener("click", lampu);
+    </script>
+</body>
+</html>
