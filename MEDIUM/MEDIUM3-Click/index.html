@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Soal 03 - Penghitung Mundur</title>
+</head>
+<body>
+
+  <h2>Soal 03: Penghitung Mundur</h2>
+
+  <p id="angkaHitung">10</p>
+  <button id="tombolKurangi">Kurangi</button>
+
+  <script>
+    let angka = 10;
+    let tampil = document.getElementById("angkaHitung");
+    let tombol = document.getElementById("tombolKurangi");
+
+    function hitungMundur() {
+        if(angka > 0) {
+            angka--;
+            if (angka === 0) {
+                tampil.innerText = "Liftoff!"
+                tombol.disabled = true;
+            } else {
+                tampil.innerText = angka;
+            }
+        }
+    }
+    tombol.addEventListener("click", hitungMundur);
+  </script>
+</body>
+</html>

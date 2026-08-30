@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok barang</title>
+</head>
+<body>
+    <h1>Kasir</h1>
+    <p>Jika ada pembeli, klik tombol dibawah</p>
+    <h1 id="tampilStok">Stock :6</h1>
+    <button id="tombolStok">Mengambil Stok</button>
+
+    <script>
+        let stok = 5;
+        let tampil = document.getElementById("tampilStok");
+        let tombol = document.getElementById("tombolStok");
+        
+        function ambilStok() {
+           if (stok > 0) { 
+            stok--;
+            if (stok === 0) {
+                tampil.innerText = "Stok Habis";
+                tombol.disabled = true;
+            } else {
+                tampil.innerText = "stok :" + stok;
+            }
+           }
+        }
+        tombol.addEventListener("click", ambilStok);
+    </script>
+</body>
+</html>
