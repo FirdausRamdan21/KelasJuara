@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Soal 02 - Validasi Input Nama</title>
+</head>
+
+<body>
+
+  <h2>Soal 02: Validasi Input Nama</h2>
+
+  <input type="text" id="inputNama" placeholder="Tulis namamu di sini..." />
+  <button id="tombolCek">Cek Nama</button>
+  <p id="hasilCek"></p>
+
+  <script>
+    let input = document.getElementById("inputNama");
+    let hasil = document.getElementById("hasilCek");
+    let tombol = document.getElementById("tombolCek");
+    function nama() {
+        let isiNama = input.value;
+        if (isiNama === "") {
+            hasil.innerText = "Nama tidak boleh kosong!";
+        } else {
+            hasil.innerText = "Halo, " + isiNama + "!";
+        }
+    }
+    tombol.addEventListener("click", nama);
+  </script>
+</body>
+
+</html>

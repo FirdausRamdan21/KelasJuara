@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+</head>
+<body>
+    <h1>Tester Validasi</h1>
+    <form>
+        <fieldset>
+            <legend>Sign in</legend>
+            <label>Validasi Kode</label>
+            <input type="text" id="inputKode" placeholder="Masukkan kode promo" />
+            <button id="tombolCek">Cek Kode</button>
+            <p id="hasilCek"></p>
+        </fieldset>
+    </form>
+    <script>
+                let input = document.getElementById("inputKode");
+                let hasil = document.getElementById("hasilCek");
+                let tombol = document.getElementById("tombolCek");
+                function periksa() {
+                    let isi = input.value;
+
+                    if (isi === "") {
+                        hasil.innerText = "Kode promo tidak boleh kosong!";
+                    } else {
+                        hasil.innerText = "kode promo " + isi + " berhasil digunakan";
+                    }
+                }
+                tombol.addEventListener("click", periksa);
+    </script>
+</body>
+</html>
