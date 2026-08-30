@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warna Favoritmu</title>
+</head>
+<body>
+    <h1>Apa Warna favoritmu?</h1>
+    <p>Klik tombol dibawah ini untuk mencari warnamu!</p>
+    <h1 id="tampilWarna"></h1>
+    <button id="tombolWarna">Ganti Warna</button>
+
+    <script>
+        let tampil = document.getElementById("tampilWarna");
+        let tombol = document.getElementById("tombolWarna");
+        let warna = 6;
+
+        function gantiWarna() {
+            if (warna >= 0) {
+                warna--;
+                if(warna === 5) {
+                    tampil.innerText = "Biru";
+                    document.body.style.backgroundColor = "#3A86FF";
+                    document.body.style.color = "#FFF7EB";
+                } else if (warna === 4){
+                    tampil.innerText = "Oranye";
+                    document.body.style.backgroundColor = "#FFA259";
+                    document.body.style.color = "#202040";
+                } else if (warna === 3){
+                    tampil.innerText = "Merah";
+                    document.body.style.backgroundColor = "#DE3E3E";
+                    document.body.style.color = "#FFF7EB";
+                } else if (warna === 2) {
+                    tampil.innerText = "Kuning";
+                    document.body.style.backgroundColor = "#FFFC9B";
+                    document.body.style.color = "#202040";
+                } else if (warna === 1) {
+                    tampil.innerText = "Hijau";
+                    document.body.style.backgroundColor = "#83E85A";
+                    document.body.style.color = "#FFF7EB";
+                } else if (warna < 0) {
+                    tampil.innerText = "???";
+                    document.body.style.backgroundColor = "#000000";
+                    document.body.style.color = "#A93545";
+                }
+            }
+        }
+        tombol.addEventListener("click", gantiWarna);
+    </script>
+</body>
+</html>

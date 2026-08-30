@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Soal 04 - Ubah Tema Halaman</title>
+</head>
+
+<body>
+
+  <h2>Soal 04: Ubah Tema Halaman</h2>
+
+  <button id="tombolGelap">Mode Gelap</button>
+  <button id="tombolTerang">Mode Terang</button>
+  <p id="statusTema">Status tema akan muncul di sini</p>
+
+  <script>
+    let tampil = document.getElementById("statusTema");
+    let tombolgelap = document.getElementById("tombolGelap");
+    let tombolTerang = document.getElementById("tombolTerang");
+    function terang() {
+        tampil.innerText = "Mode Terang Aktif";
+        document.body.style.backgroundColor = "#FFF7EB";
+        document.body.style.color = "#000000";
+        tombolTerang.disabled = true;
+        tombolgelap.disabled = false;
+    }
+    function gelap() {
+        tampil.innerText = "mode Gelap Aktif";
+        document.body.style.backgroundColor = "#000000";
+        document.body.style.color = "#FFF7EB";
+        tombolgelap.disabled = true;
+        tombolTerang.disabled = false;
+    }
+    tombolTerang.addEventListener("click", terang);
+    tombolgelap.addEventListener("click", gelap);
+  </script>
+</body>
+
+</html>
