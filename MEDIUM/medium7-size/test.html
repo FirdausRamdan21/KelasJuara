@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoom Peta</title>
+</head>
+<body>
+
+  <h2>Kontrol Zoom Peta</h2>
+
+  <p id="areaZoom" style="font-size: 16px;">🗺️ Pusat Kota</p>
+  <p id="statusZoom">Zoom: 16px</p>
+  <button id="tombolZoomIn">Perbesar</button>
+  <button id="tombolZoomOut">Perkecil</button>
+
+  <script>
+    let ukuranZoom = 16;
+    let area = document.getElementById("areaZoom");
+    let status = document.getElementById("statusZoom");
+    let tombolIn = document.getElementById("tombolZoomIn");
+    let tombolOut = document.getElementById("tombolZoomOut");
+
+    function zoomIn() {
+      ukuranZoom += 2;
+      area.style.fontSize = ukuranZoom + "px";
+      status.innerText = "Zoom: " + ukuranZoom + "px";
+    }
+
+    function zoomOut() {
+      if (ukuranZoom > 10) {
+        ukuranZoom -= 2;
+        area.style.fontSize = ukuranZoom + "px";
+        status.innerText = "Zoom: " + ukuranZoom + "px";
+      }
+    }
+
+    tombolIn.addEventListener("click", zoomIn);
+    tombolOut.addEventListener("click", zoomOut);
+  </script>
+</body>
+</html>

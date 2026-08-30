@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Soal 07 - Ubah Ukuran Teks</title>
+</head>
+
+<body>
+
+  <h2>Soal 07: Ubah Ukuran Teks</h2>
+
+  <p id="teksUkuran">Ukuran teks ini bisa diubah!</p>
+  <p id="statusUkuran">Ukuran saat ini: 16px</p>
+  <button id="tombolBesar">Perbesar</button>
+  <button id="tombolKecil">Perkecil</button>
+
+  <script>
+    let ukuranFont = 16;
+
+    let teks = document.getElementById("teksUkuran");
+    let status = document.getElementById("statusUkuran");
+    let tombolBesar = document.getElementById("tombolBesar");
+    let tombolKecil = document.getElementById("tombolKecil");
+
+    function perbesar() {
+    ukuranFont += 2;
+    teks.style.fontSize = ukuranFont + "px";
+    status.innerText = "Ukuran saat ini: " + ukuranFont + "px";
+    }
+
+    function perkecil() {
+    if (ukuranFont > 10) {
+        ukuranFont -= 2;
+        teks.style.fontSize = ukuranFont + "px";
+        status.innerText = "Ukuran saat ini: " + ukuranFont + "px";
+    }
+    }
+
+    tombolBesar.addEventListener("click", perbesar);
+    tombolKecil.addEventListener("click", perkecil);
+  </script>
+</body>
+
+</html>
