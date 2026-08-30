@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Soal 02 - Validasi Input Nama</title>
+</head>
+
+<body>
+
+  <h2>Soal 5: Hitunglah</h2>
+    <label>Angka 1</label>
+    <input type="text" id="input1" placeholder="Angka1" />
+    <label>Angka 2</label>
+    <input type="text" id="input2" placeholder="Angka2" />
+    <button id="tombolCek">Hitung</button>
+    <p id="hasil"></p>
+
+  <script>
+    let input1 = document.getElementById("input1");
+    let input2 = document.getElementById("input2");
+    let hasil = document.getElementById("hasil");
+    let tombol = document.getElementById("tombolCek");
+    function hitungTotal() {
+        let nilai1 = Number(input1.value);
+        let nilai2 = Number(input2.value);
+        let total = nilai1 + nilai2;
+        hasil.innerText = "Total Angka: " + total;
+    }
+    tombol.addEventListener("click", hitungTotal);
+  </script>
+</body>
+
+</html>
