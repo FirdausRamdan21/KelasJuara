@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Soal 06 - Tebak Angka</title>
+</head>
+
+<body>
+
+  <h2>Soal 06: Tebak Angka</h2>
+  <p>Tebak angka rahasia antara 1-10!</p>
+
+  <input type="number" id="inputTebak" placeholder="Masukkan tebakan kamu..." />
+  <button id="tombolTebak">Tebak!</button>
+  <p id="hasilTebak"></p>
+
+  <script>
+    const angkaRahasia = 7;
+    let input = document.getElementById("inputTebak");
+    let tombol = document.getElementById("tombolTebak");
+    let hasil = document.getElementById("hasilTebak");
+
+    function tebak() {
+        let menginput = Number(input.value);
+        if (input === angkaRahasia) {
+            hasil.innerText = "Benar! Kamu menebak dengan tepat!";
+            document.body.style.backgroundColor = ("cyan");
+        } else {
+            hasil.innerText = "Salah! Coba lagi.";
+            document.body.style.backgroundColor = ("black");
+            document.body.style.color = ("red");
+        }
+    }
+    tombol.addEventListener("click", tebak);
+  </script>
+</body>
+
+</html>

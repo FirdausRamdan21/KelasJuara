@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kode Akses Admin</h1>
+    <p>Kode: </p>
+    <input type="text" id="inputKode" placeholder="tuliskan kodenya">
+    <button id="tombolCek">Validasi</button>
+    <p id="hasil"></p>
+
+    <script>
+        const kodeAkses = 1234;
+
+        let input = document.getElementById("inputKode");
+        let hasil = document.getElementById("hasil");
+        let tombol = document.getElementById("tombolCek");
+        function mencocokan() {
+            let angkaInput = Number(input.value);
+            if (angkaInput === kodeAkses) {
+                hasil.innerText = "kode diterima. selamat datang!";
+                document.body.style.backgroundColor = ("cyan");
+            } else {
+                hasil.innerText = "Anda adalah insquisitor, lenyapkan sekarang";
+                document.body.style.backgroundColor = ("black");
+                document.body.style.color = ("red");
+            }
+        }
+        tombol.addEventListener("click", mencocokan);
+    </script>
+</body>
+</html>
